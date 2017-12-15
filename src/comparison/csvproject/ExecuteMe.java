@@ -13,6 +13,8 @@ import com.univocity.parsers.csv.CsvParserSettings;
 public class ExecuteMe {
 
     public static void main(String[] args) {
+    	//TEST
+
         ExecuteMe me = new ExecuteMe();
 
         me.comunivocity();
