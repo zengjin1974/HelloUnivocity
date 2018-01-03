@@ -29,10 +29,13 @@ public class ExecuteMe {
         parserSettings.setProcessor(processor);
         parserSettings.setHeaderExtractionEnabled(true);
 
-        File file = new File(ClassLoader.getSystemResource("person.csv").getFile());
+        //File file = new File(ClassLoader.getSystemResource("person.csv").getFile());
+        String pathname = "D:\\datafile\\person.csv";
+        File file = new File(pathname);
+        
 
         CsvParser parser = new CsvParser(parserSettings);
-        parser.parse(file, Charset.forName("Shift_JIS"));
+        parser.parse(file, Charset.forName("UTF-8"));
 
         List<comparison.csvproject.com.univocity.Person> beans = processor.getBeans();
         for (comparison.csvproject.com.univocity.Person bean : beans) {
